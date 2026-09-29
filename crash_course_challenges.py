@@ -45,6 +45,13 @@ if attempt == password:
 else:
     print("Access denied")
 
+plate = 4827
+
+if plate % 2 == 0:
+    print("Park on the east side")
+else:
+    print("Park on the west side")
+
 height = 48
 age = 8
 has_adult = True
