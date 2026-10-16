@@ -62,3 +62,45 @@ print(word[1:6])
 name_first = input("Enter your first name: ")
 name_second = input("Enter your second name: ")
 print("Your formatted name is:" + " " + name_second + ", " + name_first)
+
+character = "SpOngEbOB sQuArePaNtS"
+print("\nLowercase:", character.lower())
+print("Uppercase:", character.upper())
+print("Capitalize first letter:", character.capitalize())
+print("Title format:", character.title())
+
+print()
+
+# find and replace text
+sentence = "I'm a goofy goober."
+new_sentence = sentence.replace("I'm", "You're")
+print(sentence)
+print(new_sentence)
+
+# JOIN AND SPLIT
+groceries = "milk,eggs,bread,butter,peanuts"
+print("\nOriginal string: ", groceries)
+
+# Split the string into a Python list, based on a 'delimiter'
+items = groceries.split(",")
+print(items)
+
+# Join a Python list back together into a string
+joined = " and ".join(items)
+print(joined)
+print(type(items))
+print(type(joined))
+
+# Challenge 3: Word Mutation
+# Ask for a word and print it backwards, in uppercase, and lowercase.
+# Example output
+# Enter a word: Python
+# Uppercase: PYTHON
+# Lowercase: python
+# Backwards: nohtyP
+
+word = input("Enter a word: ")
+print(word)
+print("Uppercase:", word.upper())
+print("Lowercase:", word.lower())
+print("Reverse:", word[::-1])
