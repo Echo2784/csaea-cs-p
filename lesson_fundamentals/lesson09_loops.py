@@ -84,11 +84,98 @@
 
 #     print("Number", i)
 
-# Challenge 2: Guess Until Correct
-# Create a while-loop that keeps asking for a number until the user types 7.
+# # Challenge 2: Guess Until Correct
+# # Create a while-loop that keeps asking for a number until the user types 7.
 
-num = input("Enter a number ")
-user_input = int(num)
-while user_input != '7':
-    user_input = input("Enter a number ")
+# num = input("Enter a number ")
+# user_input = int(num)
+# while user_input != '7':
+#     user_input = input("Enter a number ")
 
+# # Challenge 3: Use a whiteboard to predict (no running!). Write the output, then check.
+# for i in range(10, 0, -3):
+#     print(i)
+
+# for i in range(3):
+#     if i == 5:
+#         break
+#     else:
+#         print("done")
+
+# # Challenge 4: Trace. Track total and n each pass. What prints?
+# total = 0
+# n = 1
+
+# while total < 20:
+#     total = total + n
+#     n += 2
+
+# print(total, n)
+
+# # The first 2 passes are done for you, complete the rest:
+# # Pass 1: check 0 < 20 → True
+# #         total = 0 + 1 = 1
+# #         n = 1 + 2 = 3
+# # Pass 2: check 1 < 20 → True
+# #         total = 1 + 3 = 4
+# #         n = 3 + 2 = 5
+# # Write out the rest of the passes, until the while loop breaks.
+
+
+
+# # Challenge 3: This code should print the number of vowels in "pineapple".
+# # But this code has bugs, and is in the wrong order. 
+# # Unscramble to count vowels in "pineapple". One line doesn't belong.
+# # 
+      
+# count = 0
+# for letter in "pineapple":
+#         if letter in "aeiou":
+#             count += 1
+#             print(count)
+
+# # Challenge 4: Debug. This loop never ends! Press Ctrl+C to stop it.
+# # Fix it by only changing only one small thing.
+
+# n = 10
+# while n != 0:
+#     n -= 5
+# print("Escaped!")
+
+# # Challenge 5: Write a guessing game with 5 tries and hints.
+# # The computer picks a secret number from 1 to 20. The player gets 5 guesses.
+# # The player will receive HINTS if they have an incorrect guess.
+# #
+# # preconditions: 
+# # the random library; 
+# # a random integer stored as the 'secret' that the player must guess.
+# #
+# # Pseudocode:
+# #   repeat 5 times (use a for-loop with range):
+# #       ask the player for a guess (convert it to an int!)
+# #       if guess equals secret → print "Got it!" and stop the loop
+# #       otherwise, if guess is bigger → print "Too high"
+# #       otherwise → print "Too low"
+# #   if the loop never stopped early → print "Out of guesses! It was" + secret
+
+import random
+tries = 5
+secret = random.randint(1,20)
+for guess in range(tries):
+    rand_num = input("Guess a number between 1 and 20: ")
+    user_input = int(rand_num)
+    if user_input == secret:
+        print("Got it!")
+        break
+    if user_input > secret:
+        print("Too high")
+    else:
+        print("Too low")
+    if user_input != secret:
+        tries -= 1
+        if tries == 0:
+            print(f"Out of guesses! It was {secret}")
+# num = input("Enter a number ")
+# user_input = int(num)
+# while user_input != '7':
+# user_input = input("Enter a number ")
