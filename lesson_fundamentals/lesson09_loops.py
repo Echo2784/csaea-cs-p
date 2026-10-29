@@ -175,7 +175,3 @@ for guess in range(tries):
         tries -= 1
         if tries == 0:
             print(f"Out of guesses! It was {secret}")
-# num = input("Enter a number ")
-# user_input = int(num)
-# while user_input != '7':
-# user_input = input("Enter a number ")
