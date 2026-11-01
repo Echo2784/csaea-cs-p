@@ -80,3 +80,95 @@ def doubler(num, times):
     return result_list
 output_list = doubler(num, times)
 print(output_list)
+
+# For Challenges 1 - 3, first write pseudocode, then solve in code.
+ 
+# Challenge 1. 
+# Make a calculator with 4 procedures that accept two arguments each. 
+# 1) add any two numbers and print the result
+# 2) subtract any two numbers and print the result
+# 3) divide any two numbers and print the result
+# 4) multiply any two numbers and print the result 
+
+def adder(a, b):
+    return(a + b)
+
+sum = adder(5,10)
+print(sum)
+
+def subtractor(a, b):
+    return(a - b)
+
+difference = subtractor(5,10)
+print(difference)
+
+def multiplier(a, b):
+    return(a * b)
+
+product = multiplier(5,10)
+print(product)
+
+def divider(a, b):
+    return(a / b)
+
+quotient = divider(5,10)
+print(quotient)
+
+# Challenge 2
+# Make a function called average that:
+# 1) accepts five numbers
+# 2) returns the average
+# 3) print the returned value outside the function
+
+def average(a, b, c, d, e):
+    return((a + b + c + d + e) / 5)
+
+result = average(5,10,15,20,25)
+print(result)
+
+# Challenge 3
+# Make a function called is_even that:
+# 1) accepts one number
+# 2) prints "Even" if the number is even
+# 3) prints "Odd" if the number is odd
+
+def number(a):
+    return(a)
+type_of_number = number(56)
+if type_of_number % 2 > 0:
+    print("Odd")
+else:
+    print("Even")
+
+# Challenge 4
+# Use the pseudocode below to write code:
+# Make a function called "analyze_word" that counts how many vowels and consonants are in a word
+# Tools: uses a for loop, IF/THEN statement, "aeiou".
+
+# The function analyze_word accepts one argument, a single word (string):
+# Initialize two variables:
+# vowelCount set to 0
+# consonantCount set to 0
+# Use a loop to iterate through each character in the word.
+# Inside the loop, use an IF/ELSE statement:
+# If the character is a vowel (a, e, i, o, u), increment vowelCount.
+# Otherwise, increment consonantCount.
+# After the loop ends: 
+# 	return a f-string that states how many vowels and how many consonants are in the word.
+
+# Call the function with a sample one-word string and print the returned result outside the function
+
+
+def analyze_word(letter):
+    vowelCount = 0
+    consonantCount = 0
+    for i in letter:
+        if i in "aeiou":
+            vowelCount += 1
+        elif i in "bcdfghjklmnpqrstvwxyz":
+            consonantCount += 1
+    return vowelCount, consonantCount
+
+vowelCount, consonantCount = analyze_word("pineapple")
+print(f"Vowel Count: {vowelCount}")
+print(f"Consonant Count: {consonantCount}")
